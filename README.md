@@ -1,3 +1,4 @@
+
 # Next.js Interactive Keyboard Component
 
 ![Project Status](https://img.shields.io/badge/status-alpha-orange.svg)
@@ -5,31 +6,35 @@
 ![Next.js Version](https://img.shields.io/badge/Next.js-16.2.0-black.svg)
 ![React Version](https://img.shields.io/badge/React-19.2.4-blue.svg)
 
-## Overview
+## 🌟 Overview
 
-This project provides a visually appealing and interactive virtual keyboard component built with Next.js, React, and Tailwind CSS. It's designed to be a standalone, reusable UI element that mimics a modern keyboard layout, complete with key press animations and sound feedback.
+This repository is a collection of modern, interactive UI components built with Next.js, React, and Tailwind CSS. It serves as a library for high-quality, reusable interface elements, currently featuring:
 
-The primary goal is to showcase a robust, responsive, and customizable keyboard interface, suitable for web applications requiring on-screen input, educational tools, or unique interactive experiences.
+*   **Next.js Interactive Keyboard**: A standalone virtual keyboard component with realistic animations and auditory feedback.
+*   **Bento Grid Dashboard**: A sophisticated, responsive grid layout designed for AI agent management, featuring LLM model selectors, workflow builders, and tool integration previews.
+## 🚀 Features
 
-## Features
+### ⌨️ Interactive Keyboard
+*   **Realistic Layout**: Mimics a standard QWERTY keyboard with function keys and modifiers.
+*   **Interactive Feedback**: Keys visually depress on click with integrated auditory click sounds.
 
-*   **Realistic Keyboard Layout**: Mimics a standard QWERTY keyboard with function keys, modifiers, and arrow keys.
-*   **Interactive Key Presses**: Keys visually depress on click, providing immediate feedback.
-*   **Auditory Feedback**: Plays a subtle click sound on each key press for an enhanced user experience.
-*   **Modern Styling**: Styled with Tailwind CSS 4 for a clean, responsive, and easily customizable appearance.
-*   **Icon Support**: Integrates Lucide-react for crisp, scalable icons on function keys.
-*   **Next.js App Router**: Utilizes the latest Next.js features for efficient development and rendering.
-*   **TypeScript**: Written entirely in TypeScript for type safety and improved developer experience.
+### 🍱 Bento Grid
+*   **LLM Model Selector**: Dynamic interface to track agent activity and connection status for models like Claude 4, ChatGPT, and Llama 3.2.
+*   **Workflow Builder**: Interactive text-to-workflow sandbox with a chat-based UI and message history.
+*   **Native Integration**: Visual tracking of triggers, tools, and outcomes within a unified grid system.
 
-## Tech Stack
+### 🛠️ Core Capabilities
+*   **Modern Styling**: Built with Tailwind CSS 4 for clean, responsive, and high-performance visuals.
+*   **TypeScript Core**: Written entirely in TypeScript for robust type safety and developer experience.
+*   **Iconography**: Utilizes Lucide-react for crisp, scalable vector icons across all components.
+## 🛠️ Tech Stack
 
-*   **Framework**: [Next.js](https://nextjs.org/) (v16.2.0)
+*   **Framework**: [Next.js](https://nextjs.org/) (v16.2.1)
 *   **UI Library**: [React](https://react.dev/) (v19.2.4)
 *   **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v4)
 *   **Language**: [TypeScript](https://www.typescriptlang.org/) (v5)
-*   **Icons**: [Lucide-react](https://lucide.dev/) (v0.577.0)
+*   **Icons**: [Lucide-react](https://lucide.dev/) (v1.6.0)
 *   **Fonts**: [Geist](https://vercel.com/font) (Sans & Mono)
-
 ## Architecture
 
 This project follows the standard Next.js App Router architecture.
@@ -54,36 +59,47 @@ keyboard/
 *   **`app/component/keyboard.tsx`**: This is the core component. It defines the keyboard layout, handles the click logic, and integrates the visual and auditory feedback. It uses the `'use client'` directive as it involves client-side interactivity (event listeners, audio playback).
 *   **`public/click.mp3`**: A simple audio file played when a key is "pressed" to simulate tactile feedback.
 
-## Getting Started
+## 🏁 Getting Started
 
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+Follow these instructions to get a copy of the project up and running on your local machine. This repository contains multiple component projects located in their respective subdirectories.
 
 ### Prerequisites
 
 Before you begin, ensure you have the following installed:
 
 *   **Node.js**: v18.x or higher (LTS recommended)
-*   **npm** (comes with Node.js) or **Yarn** or **pnpm**
+*   **Package Manager**: npm, yarn, pnpm, or bun
 
 ### Installation
 
 1.  **Clone the repository**:
-    ```bash
+    bash
     git clone https://github.com/kaihere14/Component_Library.git
-    cd Component_Library/keyboard
-    ```
+    cd Component_Library
+    
 
-2.  **Install dependencies**:
-    ```bash
+2.  **Navigate to a component directory**:
+    bash
+    # To run the Bento Grid project
+    cd bento-grid
+
+    # OR To run the Keyboard project
+    cd keyboard
+    
+
+3.  **Install dependencies**:
+    bash
     npm install
-    # or yarn install
-    # or pnpm install
-    ```
+    
+
+4.  **Run the development server**:
+    bash
+    npm run dev
+    
 
 ### Configuration
 
-This project uses standard Next.js and Tailwind CSS configurations. No special environment variables are required to run the development server.
-
+These projects use standard Next.js and Tailwind CSS configurations. No special environment variables are required to run the development servers.
 ## Usage
 
 To see the interactive keyboard component in action:

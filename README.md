@@ -14,6 +14,10 @@ This repository is a collection of modern, interactive UI components built with 
 *   **Bento Grid Dashboard**: A sophisticated, responsive grid layout designed for AI agent management, featuring LLM model selectors, workflow builders, and tool integration previews.
 ## 🚀 Features
 
+### 💻 Interactive Macbook
+*   **3D Animation**: Features a realistic 3D opening animation using CSS perspective and transforms.
+*   **Dynamic Hover**: Transitions from a tilted "closed" state to a flat "open" state on hover, revealing the screen content.
+
 ### ⌨️ Interactive Keyboard
 *   **Realistic Layout**: Mimics a standard QWERTY keyboard with function keys and modifiers.
 *   **Interactive Feedback**: Keys visually depress on click with integrated auditory click sounds.
@@ -29,7 +33,7 @@ This repository is a collection of modern, interactive UI components built with 
 *   **Iconography**: Utilizes Lucide-react for crisp, scalable vector icons across all components.
 ## 🛠️ Tech Stack
 
-*   **Framework**: [Next.js](https://nextjs.org/) (v16.2.1)
+*   **Framework**: [Next.js](https://nextjs.org/) (v16.2.3)
 *   **UI Library**: [React](https://react.dev/) (v19.2.4)
 *   **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v4)
 *   **Language**: [TypeScript](https://www.typescriptlang.org/) (v5)
@@ -80,10 +84,13 @@ Before you begin, ensure you have the following installed:
 
 2.  **Navigate to a component directory**:
     bash
+    # To run the Macbook project
+    cd Laptop
+
     # To run the Bento Grid project
     cd bento-grid
 
-    # OR To run the Keyboard project
+    # To run the Keyboard project
     cd keyboard
     
 
@@ -102,36 +109,49 @@ Before you begin, ensure you have the following installed:
 These projects use standard Next.js and Tailwind CSS configurations. No special environment variables are required to run the development servers.
 ## Usage
 
-To see the interactive keyboard component in action:
+To see the interactive components in action:
 
-1.  **Start the development server**:
-    ```bash
+1.  **Start the development server** in the desired directory (`Laptop`, `keyboard`, or `bento-grid`):
+    bash
     npm run dev
     # or yarn dev
     # or pnpm dev
-    ```
+    
 
 2.  **Open your browser**:
-    Navigate to `http://localhost:3000`. You should see the interactive keyboard displayed on the page.
+    Navigate to `http://localhost:3000` to see the component displayed on the page.
 
-3.  **Interact with the keyboard**:
-    Click on any key to observe the visual depression and hear the click sound.
+3.  **Interact with the component**:
+    *   **Macbook**: Hover over the laptop to see it open and reveal the screen content.
+    *   **Keyboard**: Click on any key to observe the visual depression and hear the click sound.
 
-### Integrating the Component
+### Integrating the Components
 
-To use the `Keyboard` component in another Next.js application:
+#### 💻 Macbook Component
+1.  **Copy the component**: Copy the `Macbook.tsx` file from `Laptop/app/components/Macbook.tsx` into your project's components directory.
+2.  **Import and render**:
+    tsx
+    import Macbook from '@/components/Macbook';
 
-1.  **Install dependencies**: Ensure `lucide-react` is installed in your target project.
-    ```bash
+    export default function MyPage() {
+      return (
+        <div className="flex justify-center items-center h-screen">
+          <Macbook />
+        </div>
+      );
+    }
+    
+
+#### ⌨️ Keyboard Component
+1.  **Install dependencies**: Ensure `lucide-react` is installed.
+    bash
     npm install lucide-react
-    ```
-2.  **Copy the component**: Copy the `keyboard.tsx` file from `app/component/keyboard.tsx` into your project's components directory.
+    
+2.  **Copy the component**: Copy the `keyboard.tsx` file from `keyboard/app/component/keyboard.tsx` into your project.
 3.  **Import and render**:
-    ```tsx
-    // In your page or component file (e.g., app/page.tsx)
-    'use client'; // If this component uses client-side features like event listeners
-
-    import Keyboard from '@/components/keyboard'; // Adjust path as needed
+    tsx
+    'use client';
+    import Keyboard from '@/components/keyboard';
 
     export default function MyPage() {
       return (
@@ -140,9 +160,8 @@ To use the `Keyboard` component in another Next.js application:
         </div>
       );
     }
-    ```
-    Ensure you also copy the `public/click.mp3` file to your target project's `public` directory if you want the sound feedback.
-
+    
+    *Note: Ensure you also copy the `public/click.mp3` file to your target project's `public` directory if you want the sound feedback.*
 ## Development
 
 ### Setting up Development Environment

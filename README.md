@@ -12,6 +12,7 @@ This repository is a collection of modern, interactive UI components built with 
 
 *   **Next.js Interactive Keyboard**: A standalone virtual keyboard component with realistic animations and auditory feedback.
 *   **Bento Grid Dashboard**: A sophisticated, responsive grid layout designed for AI agent management, featuring LLM model selectors, workflow builders, and tool integration previews.
+*   **Repeating Gradient Hero**: A visually striking landing page section featuring complex geometric patterns, repeating linear gradients, and advanced CSS masking.
 ## 🚀 Features
 
 ### 💻 Interactive Macbook
@@ -27,15 +28,21 @@ This repository is a collection of modern, interactive UI components built with 
 *   **Workflow Builder**: Interactive text-to-workflow sandbox with a chat-based UI and message history.
 *   **Native Integration**: Visual tracking of triggers, tools, and outcomes within a unified grid system.
 
+### 🌈 Repeating Gradient Hero
+*   **Geometric Patterns**: Utilizes custom line components to create a structured, technical aesthetic using repeating linear gradients for X and Y axes.
+*   **Advanced Masking**: Implements radial and linear masks to blend background imagery and patterns seamlessly into the layout.
+*   **Custom Container**: Includes a reusable layout wrapper for consistent spacing and alignment across high-impact hero sections.
+
 ### 🛠️ Core Capabilities
 *   **Modern Styling**: Built with Tailwind CSS 4 for clean, responsive, and high-performance visuals.
 *   **TypeScript Core**: Written entirely in TypeScript for robust type safety and developer experience.
 *   **Iconography**: Utilizes Lucide-react for crisp, scalable vector icons across all components.
 ## 🛠️ Tech Stack
 
-*   **Framework**: [Next.js](https://nextjs.org/) (v16.2.3)
+*   **Framework**: [Next.js](https://nextjs.org/) (v16.2.4)
 *   **UI Library**: [React](https://react.dev/) (v19.2.4)
 *   **Styling**: [Tailwind CSS](https://tailwindcss.com/) (v4)
+*   **Utilities**: [tailwind-merge](https://www.npmjs.com/package/tailwind-merge) & [clsx](https://www.npmjs.com/package/clsx)
 *   **Language**: [TypeScript](https://www.typescriptlang.org/) (v5)
 *   **Icons**: [Lucide-react](https://lucide.dev/) (v1.6.0)
 *   **Fonts**: [Geist](https://vercel.com/font) (Sans & Mono)
@@ -92,6 +99,9 @@ Before you begin, ensure you have the following installed:
 
     # To run the Keyboard project
     cd keyboard
+
+    # To run the Repeating Gradient Hero project
+    cd repeating-gradient-hero
     
 
 3.  **Install dependencies**:
